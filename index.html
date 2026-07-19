@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aleya Zaki — Finance Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FCFBF8;
+    --ink:#1A1D21;
+    --rule:#DAD6CD;
+    --accent:#A4302E;
+    --muted:#6B6B66;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+  a:hover,a:focus-visible{border-bottom-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  /* Confidential strip — the document signature */
+  .strip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);
+    border-bottom:1px solid var(--rule);
+    padding:12px 0;text-align:center;
+  }
+  .strip span{color:var(--accent)}
+
+  /* Masthead */
+  header{padding:64px 0 40px;border-bottom:2px solid var(--ink)}
+  .role{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  h1{
+    font-family:'Libre Caslon Text',serif;
+    font-size:clamp(38px,6vw,56px);
+    font-weight:700;line-height:1.05;letter-spacing:-.01em;
+  }
+  .thesis{
+    font-family:'Libre Caslon Text',serif;font-style:italic;
+    font-size:clamp(18px,2.6vw,22px);color:var(--ink);
+    margin-top:20px;max-width:34em;
+  }
+  .contact{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 28px;
+    font-family:'IBM Plex Mono',monospace;font-size:13px;
+  }
+  .contact a{color:var(--ink)}
+  .contact a:hover{color:var(--accent)}
+
+  /* Intro */
+  .intro{padding:40px 0;border-bottom:1px solid var(--rule);max-width:44em}
+  .intro p+p{margin-top:14px}
+
+  /* Exhibits */
+  .exhibits{padding:48px 0 24px}
+  .exhibits-label{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:28px;
+  }
+  .exhibit{
+    display:grid;grid-template-columns:110px 1fr;gap:24px;
+    padding:32px 0;border-bottom:1px solid var(--rule);
+  }
+  .exhibit:last-of-type{border-bottom:none}
+  .exhibit-letter{
+    font-family:'Libre Caslon Text',serif;font-weight:700;
+    font-size:15px;color:var(--accent);line-height:1.3;
+  }
+  .exhibit-letter small{
+    display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;
+    font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;
+  }
+  .exhibit h2{
+    font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:700;
+    line-height:1.25;margin-bottom:10px;
+  }
+  .exhibit p{max-width:40em}
+  .exhibit p+p{margin-top:10px}
+  .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.05em;
+    border:1px solid var(--rule);padding:3px 10px;color:var(--muted);
+  }
+  .links{margin-top:16px;display:flex;flex-wrap:wrap;gap:20px;font-size:14.5px;font-weight:500}
+  .todo{
+    background:#F4E9E8;border:1px dashed var(--accent);color:var(--accent);
+    font-family:'IBM Plex Mono',monospace;font-size:12px;padding:2px 8px;
+  }
+
+  /* Skills strip */
+  .skills{
+    border-top:2px solid var(--ink);
+    padding:36px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;
+  }
+  .skills h3{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:8px;
+  }
+  .skills p{font-size:14.5px;color:var(--ink)}
+
+  footer{
+    border-top:1px solid var(--rule);padding:28px 0 56px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;
+  }
+  @media(max-width:600px){
+    .exhibit{grid-template-columns:1fr;gap:8px}
+    header{padding:44px 0 32px}
+  }
+</style>
+</head>
+<body>
+
+<div class="strip wrap">Prepared in connection with an <span>analyst application</span> · London · 2026</div>
+
+<header class="wrap">
+  <div class="role">Finance Portfolio — Valuation · Modelling · Analysis</div>
+  <h1>Aleya Zaki</h1>
+  <p class="thesis">Financial modelling, company valuation and financial statement analysis — shown rather than claimed.</p>
+  <div class="contact">
+    <a href="mailto:aleyazaki.s@gmail.com">aleyazaki.s@gmail.com</a>
+    <a href="tel:+447443748167">+44 7443 748167</a>
+    <a href="https://linkedin.com/in/aleyazaki">linkedin.com/in/aleyazaki</a>
+  </div>
+</header>
+
+<section class="intro wrap">
+  <p>I am completing my MSc in Finance &amp; Accounting at Imperial Business School, with previous experience as an Investments Summer Analyst at Prima Ekuiti (UK) Limited, the investment arm of Malaysia&rsquo;s pension fund, and as an Assurance Intern at PwC. This portfolio collects work that evidences the three competencies most relevant to transaction advisory: valuation and financial modelling, financial statement analysis, and clear written communication of analytical conclusions.</p>
+  <p>Each exhibit below links to the underlying document. I am happy to walk through any of them in detail.</p>
+</section>
+
+<section class="exhibits wrap">
+  <div class="exhibits-label">Contents — Five Exhibits</div>
+
+  <article class="exhibit">
+    <div class="exhibit-letter">Exhibit A<small>Valuation</small></div>
+    <div>
+      <h2>Equity Valuation: Novo Nordisk — with a Two-Years-On Retrospective</h2>
+      <p>A full valuation of Novo Nordisk built during my internship at Prima Ekuiti: three-statement model, discounted cash flow and comparable company analysis, concluding in a BUY recommendation with 10.2% upside, presented to a panel of eight portfolio managers.</p>
+      <p>Alongside the original model sits a short retrospective written in 2026: what the thesis was, what actually happened to the business and the share price since, what the model got right and wrong, and what I would change today. Revisiting a valuation with hindsight is, I think, the fastest way to learn what drives one.</p>
+      <div class="tags"><span class="tag">DCF</span><span class="tag">Comparable Companies</span><span class="tag">Three-Statement</span><span class="tag">Healthcare</span></div>
+      <div class="links"><span class="todo">ADD LINK: model (PDF/Excel)</span> <span class="todo">ADD LINK: retrospective note</span></div>
+    </div>
+  </article>
+
+  <article class="exhibit">
+    <div class="exhibit-letter">Exhibit B<small>Secondaries</small></div>
+    <div>
+      <h2>Why Secondaries: Continuation Vehicles, Worked Through a Live Deal</h2>
+      <p>A short analysis note on GP-led secondaries and the continuation vehicle structure — why a sponsor extends ownership of a high-conviction asset, the roll-or-cash choice offered to existing investors, and where the pricing tension between fairness and incentives sits. Written to understand the mechanics of the market I want to work in, using a recent European continuation vehicle transaction as the worked example.</p>
+      <div class="tags"><span class="tag">GP-led Secondaries</span><span class="tag">Continuation Vehicles</span><span class="tag">Fund Structures</span></div>
+      <div class="links"><span class="todo">ADD LINK: analysis note (PDF)</span></div>
+    </div>
+  </article>
+
+  <article class="exhibit">
+    <div class="exhibit-letter">Exhibit C<small>Modelling</small></div>
+    <div>
+      <h2>Leveraged Buyout Model</h2>
+      <p>An LBO model built during my studies: sources and uses, debt schedule, and returns analysis across exit scenarios. Included because leverage sits underneath most sponsor-led transactions, including continuation vehicles, and because a returns bridge is where a valuation either holds together or does not.</p>
+      <div class="tags"><span class="tag">LBO</span><span class="tag">Debt Schedule</span><span class="tag">Returns Analysis</span></div>
+      <div class="links"><span class="todo">ADD LINK: model (PDF/Excel)</span></div>
+    </div>
+  </article>
+
+  <article class="exhibit">
+    <div class="exhibit-letter">Exhibit D<small>Quantitative</small></div>
+    <div>
+      <h2>Quantitative Research in R — Two Projects</h2>
+      <p><strong>Backtesting &amp; parameter optimisation.</strong> A trading-strategy engine built on a 15-year, 300MB+ Compustat daily dataset: custom signal-generation and backtesting functions, an optimisation loop across 16 parameter combinations, and an honest conclusion — both strategies underperformed the benchmark, and the write-up explains the mechanism rather than the hoped-for outcome.</p>
+      <p><strong>Factor regression modelling</strong> (group of 4). A cross-sectional analysis of 502 S&amp;P 500 tickers, culminating in a Fama&ndash;French three-factor regression: interpreting betas, significance, and an R&sup2; of 0.05 showing that over 94% of the security&rsquo;s return variation was idiosyncratic rather than factor-driven.</p>
+      <div class="tags"><span class="tag">R</span><span class="tag">Regression</span><span class="tag">Backtesting</span><span class="tag">Large Datasets</span></div>
+      <div class="links"><span class="todo">ADD LINK: project 1 (PDF)</span> <span class="todo">ADD LINK: project 2 (PDF)</span></div>
+    </div>
+  </article>
+
+  <article class="exhibit">
+    <div class="exhibit-letter">Exhibit E<small>Communication</small></div>
+    <div>
+      <h2>Research Writing — Positive Investment Imperial</h2>
+      <p>Selected research publications written as Co-Head of Research &amp; Education at Imperial Business School&rsquo;s sustainable finance society, covering private capital, blended finance and impact investing for a 90+ member cross-disciplinary readership. The society&rsquo;s work this year was recognised with a Dean&rsquo;s Community Award; my role also included securing senior speakers from Citi, BloombergNEF and specialist asset managers, and co-delivering a 150-person symposium.</p>
+      <div class="tags"><span class="tag">Investment Writing</span><span class="tag">Private Capital</span><span class="tag">Stakeholder Engagement</span></div>
+      <div class="links"><span class="todo">ADD LINK: publication 1</span> <span class="todo">ADD LINK: publication 2</span></div>
+    </div>
+  </article>
+</section>
+
+<section class="skills wrap">
+  <div><h3>Modelling &amp; Valuation</h3><p>DCF, comparable companies, three-statement, LBO, sensitivity &amp; scenario analysis</p></div>
+  <div><h3>Statements &amp; Accounting</h3><p>Financial statement analysis and audit-grade reconciliation across a 30+ subsidiary group (PwC)</p></div>
+  <div><h3>Tools</h3><p>Excel (advanced, VBA), PowerPoint, R, Python, Bloomberg Terminal</p></div>
+  <div><h3>Languages</h3><p>English (fluent), Malay (native), Indonesian (intermediate), Mandarin (basic)</p></div>
+</section>
+
+<footer class="wrap">
+  <span>Aleya Zaki · MSc Finance &amp; Accounting, Imperial Business School</span>
+  <span>References and full CV available on request</span>
+</footer>
+
+</body>
+</html>
