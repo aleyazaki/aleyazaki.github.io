@@ -5,125 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aleya Zaki — Finance Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FCFBF8;
-    --ink:#1A1D21;
-    --rule:#DAD6CD;
-    --accent:#A4302E;
-    --muted:#6B6B66;
+    --bg:#FFFFFF;
+    --bg-soft:#F8FAFC;
+    --ink:#0F172A;
+    --slate:#475569;
+    --accent:#4F8EF7;
+    --border:#E2E8F0;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
   body{
-    background:var(--paper);
+    background:var(--bg);
     color:var(--ink);
-    font-family:'IBM Plex Sans',sans-serif;
-    font-size:16px;
-    line-height:1.6;
+    font-family:'Manrope',sans-serif;
+    font-size:17px;
+    line-height:1.7;
   }
-  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
-  a:hover,a:focus-visible{border-bottom-color:var(--accent)}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none;transition:opacity .15s}
+  a:hover{opacity:.75}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
 
-  /* Confidential strip — the document signature */
   .strip{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--muted);
-    border-bottom:1px solid var(--rule);
-    padding:12px 0;text-align:center;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:600;color:var(--slate);
+    border-bottom:1px solid var(--border);
+    padding:14px 0;text-align:center;background:var(--bg-soft);
   }
-  .strip span{color:var(--accent)}
+  .strip span{color:var(--ink)}
 
-  /* Masthead */
-  header{padding:64px 0 40px;border-bottom:2px solid var(--ink)}
-  .role{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  header{padding:88px 0 56px}
+  .role{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:16px}
   h1{
-    font-family:'Libre Caslon Text',serif;
-    font-size:clamp(38px,6vw,56px);
-    font-weight:700;line-height:1.05;letter-spacing:-.01em;
+    font-size:clamp(40px,6vw,56px);
+    font-weight:800;line-height:1.08;letter-spacing:-.03em;
   }
   .thesis{
-    font-family:'Libre Caslon Text',serif;font-style:italic;
-    font-size:clamp(18px,2.6vw,22px);color:var(--ink);
-    margin-top:20px;max-width:34em;
+    font-size:clamp(18px,2.4vw,21px);color:var(--slate);
+    margin-top:22px;max-width:34em;font-weight:500;
   }
   .contact{
-    margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 28px;
-    font-family:'IBM Plex Mono',monospace;font-size:13px;
+    margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 28px;
+    font-size:14.5px;font-weight:600;
   }
   .contact a{color:var(--ink)}
-  .contact a:hover{color:var(--accent)}
+  .contact a:hover{color:var(--accent);opacity:1}
 
-  /* Intro */
-  .intro{padding:40px 0;border-bottom:1px solid var(--rule);max-width:44em}
+  .intro{
+    padding:36px 32px;margin-bottom:56px;
+    background:var(--bg-soft);border:1px solid var(--border);border-radius:16px;
+    color:var(--slate);
+  }
   .intro p+p{margin-top:14px}
 
-  /* Exhibits */
-  .exhibits{padding:48px 0 24px}
+  .exhibits{padding:0 0 24px}
   .exhibits-label{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--muted);margin-bottom:28px;
+    font-size:13px;letter-spacing:.1em;font-weight:700;
+    text-transform:uppercase;color:var(--slate);margin-bottom:24px;
   }
   .exhibit{
-    display:grid;grid-template-columns:110px 1fr;gap:24px;
-    padding:32px 0;border-bottom:1px solid var(--rule);
+    display:grid;grid-template-columns:120px 1fr;gap:24px;
+    padding:32px;margin-bottom:20px;
+    background:var(--bg);border:1px solid var(--border);border-radius:16px;
+    box-shadow:0 1px 3px rgba(15,23,42,.04);
+    border-bottom:1px solid var(--border);
   }
-  .exhibit:last-of-type{border-bottom:none}
-  .exhibit-letter{
-    font-family:'Libre Caslon Text',serif;font-weight:700;
-    font-size:15px;color:var(--accent);line-height:1.3;
-  }
+  .exhibit-letter{font-size:14px;font-weight:800;color:var(--accent);line-height:1.4}
   .exhibit-letter small{
-    display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;
-    font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;
+    display:block;font-weight:600;font-size:11.5px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--slate);margin-top:4px;
   }
-  .exhibit h2{
-    font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:700;
-    line-height:1.25;margin-bottom:10px;
-  }
-  .exhibit p{max-width:40em}
+  .exhibit h2{font-size:23px;font-weight:700;line-height:1.3;letter-spacing:-.01em;margin-bottom:10px}
+  .exhibit p{max-width:42em;color:var(--slate);font-size:16px}
+  .exhibit p strong{color:var(--ink)}
   .exhibit p+p{margin-top:10px}
   .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
   .tag{
-    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.05em;
-    border:1px solid var(--rule);padding:3px 10px;color:var(--muted);
+    font-size:12.5px;font-weight:600;letter-spacing:.02em;
+    background:var(--bg-soft);border:1px solid var(--border);
+    border-radius:999px;padding:4px 12px;color:var(--slate);
   }
-  .links{margin-top:16px;display:flex;flex-wrap:wrap;gap:20px;font-size:14.5px;font-weight:500}
+  .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .links a{
+    display:inline-block;background:var(--ink);color:#fff;
+    font-size:13.5px;font-weight:600;
+    padding:9px 18px;border-radius:10px;
+    transition:background .15s;
+  }
+  .links a:hover{background:#1E293B;opacity:1}
   .todo{
-    background:#F4E9E8;border:1px dashed var(--accent);color:var(--accent);
-    font-family:'IBM Plex Mono',monospace;font-size:12px;padding:2px 8px;
+    background:var(--bg-soft);border:1px dashed var(--accent);color:var(--accent);
+    font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:10px;
   }
 
-  /* Skills strip */
   .skills{
-    border-top:2px solid var(--ink);
-    padding:36px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;
+    margin-top:40px;padding:36px 0;border-top:1px solid var(--border);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;
   }
   .skills h3{
-    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;
+    font-size:12px;letter-spacing:.08em;font-weight:700;
     text-transform:uppercase;color:var(--accent);margin-bottom:8px;
   }
-  .skills p{font-size:14.5px;color:var(--ink)}
+  .skills p{font-size:14.5px;color:var(--slate)}
 
   footer{
-    border-top:1px solid var(--rule);padding:28px 0 56px;
-    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);
+    border-top:1px solid var(--border);padding:28px 0 64px;
+    font-size:13px;color:var(--slate);font-weight:500;
     display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;
   }
   @media(max-width:600px){
-    .exhibit{grid-template-columns:1fr;gap:8px}
-    header{padding:44px 0 32px}
+    .exhibit{grid-template-columns:1fr;gap:10px;padding:24px}
+    header{padding:56px 0 40px}
   }
 </style>
 </head>
 <body>
 
-<div class="strip wrap">Selected Projects <span> &amp; Analysis</span> · London · 2026</div>
+<div class="strip wrap">Selected <span>Projects &amp; Analysis</span> · 2026</div>
 
 <header class="wrap">
   <div class="role">Portfolio – Valuation · Financial Modelling · Investment Research · Data Analysis</div>
@@ -207,7 +209,7 @@ This portfolio brings together selected work across valuation, financial modelli
 
 <footer class="wrap">
   <span>Aleya Zaki · MSc Finance &amp; Accounting, Imperial Business School</span>
-  <span>References and full CV available on request</span>
+  <span>full CV and cover letter available on request</span>
 </footer>
 
 </body>
